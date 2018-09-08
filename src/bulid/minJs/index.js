@@ -1,0 +1,1 @@
+require(["jquery","handlebars","bscroll","goTop"],function(n,e,o,l){n.ajax({url:"/api/list",dataType:"json",success:function(o){if(0===o.code){var l=n("#list-tpl").html(),c=e.compile(l)(o.data);n("#list-cont").append(c)}},error:function(o){console.warn(o)}}),l(),new o(".scrollBox",{probeType:2,click:!0}).on("scroll",function(){console.log(this.y,this.maxScrollY)})});

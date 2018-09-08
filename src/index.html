@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>考前测试</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <script src="./js/libs/require.js" async="true" defer data-main="./js/main.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>头部</header>
+        <!-- 滚动内容 -->
+        <div class="scrollBox">
+            <main id="list-cont" up="上拉加载" down="上拉刷新">
+            </main>
+            <p class="goTop">↑</p>
+        </div>
+        <!-- 设置list模板 -->
+        <script id="list-tpl" type="text/x-handlebars-template">
+            {{#each this}}
+            <dl>
+                <dt><img src="{{url}}" alt=""></dt>
+                <dd>
+                    <p class="tit">{{tit}}</p>
+                    <p class="text">{{text}}</p>
+                    <p class="xinxi">
+                        <span><b>{{priceUp}}元</b>门市价：{{priceDown}}元</span>
+                        <em>已售{{sale}}</em>
+                    </p>
+                </dd>
+            </dl>
+            {{/each}}
+        </script>
+        <footer>底部</footer>
+    </div>
+</body>
+
+</html>

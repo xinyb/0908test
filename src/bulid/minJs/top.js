@@ -1,0 +1,1 @@
+define(["jquery"],function(o){return function(){o(".goTop").on("click",function(){console.log(8779),o("#list-cont").scrollTop(0)})}});

@@ -1,0 +1,56 @@
+.scrollBox {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    main#list-cont {
+        dl {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            dt {
+                width: 80px;
+                height: 80px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        &:before {
+            content: attr(up);
+            width: 100%;
+            background: #eee;
+            height: 44px;
+            text-align: center;
+            line-height: 44px;
+            position: absolute; //定位后，转为块元素
+            top: -44px;
+        }
+        &:after {
+            content: attr(down);
+            width: 100%;
+            background: #eee;
+            height: 44px;
+            text-align: center;
+            line-height: 44px;
+            position: absolute; //定位后，转为块元素
+            bottom: -44px;
+        }
+    }
+    .goTop {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        line-height: 50px;
+        text-align: center;
+        color: blue;
+        background: #eee;
+        position: fixed;
+        bottom: 15px;
+        right: 20px;
+        z-index: 999;
+    }
+}
